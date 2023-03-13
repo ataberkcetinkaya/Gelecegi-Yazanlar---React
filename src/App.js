@@ -1,28 +1,20 @@
 import './App.css';
 
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Contact from './pages/Contact/Contact';
+
+import ThemeContext from './context/ThemeContext';
+
+//React 301
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <ThemeContext.Provider value="light">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </ThemeContext.Provider>
   );
 }
 

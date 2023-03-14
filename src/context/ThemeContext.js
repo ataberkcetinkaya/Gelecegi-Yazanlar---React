@@ -6,10 +6,11 @@ const useData = () => useContext(ThemeContext);
 
 const Provider = ({ children }) => {
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
+        localStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
         //setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
     }
 

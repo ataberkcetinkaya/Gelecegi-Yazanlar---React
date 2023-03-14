@@ -26,20 +26,22 @@
 
 .formEdit input:focus, .formEdit textarea:focus {
   outline: none;
-  border-color: blue;
 }
 
 .formEdit button {
   padding: 10px;
   font-size: 18px;
   border-radius: 10px;
-  background-color: blue;
-  color: white;
   border: none;
   cursor: pointer;
+  border: 1px solid #000000;
 }
 
 .formEdit button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.formEdit button:hover {
+  background-color: #00bb48;
 }

@@ -1,11 +1,10 @@
 import React, { useContext } from 'react'
-import ThemeContext from '../../context/ThemeContext'
 import './ChangeTheme.css'
 import { useData } from '../../context/ThemeContext';
 
 export default function ChangeTheme() {
 
-    const { theme, toggleTheme } = useData();
+  const { theme, toggleTheme } = useData();
 
   return (
     <div>

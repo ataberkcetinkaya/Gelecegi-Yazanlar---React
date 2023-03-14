@@ -5,13 +5,11 @@ import { useData } from '../../context/ThemeContext';
 
 export default function ChangeTheme() {
 
-    const theme = useContext(ThemeContext);
-
-    const { white } = useData();
+    const { light } = useData();
 
   return (
     <div>
-      <span>Curren theme: {white}</span>
+      <span>Curren theme: {light}</span>
       <br></br>
         <button className='changeThemeButton'>
             Change Theme

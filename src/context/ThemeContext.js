@@ -6,7 +6,7 @@ const useData = () => useContext(ThemeContext);
 
 
 const ThemeContextValues = {
-    white: 'light',
+    light: 'light',
 }
 
 const Provider = ({ children }) => {

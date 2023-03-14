@@ -9,12 +9,12 @@ import ThemeContext from './context/ThemeContext';
 //React 301
 function App() {
   return (
-    <ThemeContext.Provider value="light">
+    <ThemeContext>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </ThemeContext.Provider>
+    </ThemeContext>
   );
 }
 

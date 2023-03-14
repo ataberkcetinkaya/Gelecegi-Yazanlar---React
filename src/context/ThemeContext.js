@@ -1,5 +1,22 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 
 const ThemeContext = createContext();
 
-export default ThemeContext;
+const useData = () => useContext(ThemeContext); 
+
+
+const ThemeContextValues = {
+    white: 'light',
+}
+
+const Provider = ({ children }) => {
+    return (
+        <ThemeContext.Provider value={ThemeContextValues}>
+            {children}
+        </ThemeContext.Provider>
+    );
+}
+
+
+export default Provider;
+export { useData };
